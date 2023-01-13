@@ -1,0 +1,169 @@
+<div class="container" style="margin-top:150px">
+  <div class="row">
+    <div class="col">
+<h1 class="text-white">      Achetez et vendez instantanément sur Sushi.
+   <h1 class="text-primary"> Partout.</h1> </h1>
+ <h5 class="text-mueted text-white" >Aucune inscription nécessaire. Plus de 400 jetons à échanger à portée de main.</h5>
+<div class="container">
+    <div class="row">    
+    <div class="col-xs-8 col-xs-offset-2">
+        <form role="search">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default shadow-lg bg-secondary w-100 dropdown-toggle text-light " data-toggle="dropdown" style="position: relative; left: 520px;z-index: 2; top: -2px;" id="hove">
+                    <span id="srch-category" class="rounded   text-white w-25">EPF</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu bg-dark shadow-lg " id="mnu-category" style="width: 300px; margin-left: -220px;">
+                    <li><a  class="text-white"><img [src]="star" alt="sushi" class=" rounded-circle" style="width: 15px;">Jetons populaires</a></li>
+                    <li><a  class="text-white"><img [src]="ethereum" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        Éther<br>
+                        <i style="font-size: 16px;" class="text-mueted">EPF</i>
+                    </a></li>
+                    <li ><a class="text-white text-center"><img [src]="btc" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        BTC enveloppé<br>
+                        <i style="font-size: 16px;" class="text-mueted">  WBTC</i>
+                    </a></li>
+                    <li><a  class="text-white"><img [src]="usdt" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        Attache USD <br>
+                        USDT</a></li>
+                    <li><a class="text-white"><img [src]="binance" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        Binance <br>
+                        BNB</a></li>
+                </ul>
+            </div>
+            <input type="hidden" id="txt-category">
+            <input type="text" id="txt-search" class="form-control  rounded bg-secondary  border-0 shadow-lg" placeholder="Rechercher par jeton ou adresse...">
+            <span class="input-group-btn">
+                <button id="btn-search" type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+        </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="col">
+        <form [formGroup]="cryptoForm" (ngSubmit)="onSubmit()" class="">
+        <div class="container bg-secondary rounded-top shadow-lg ">
+            <h5 class="card-title text-white"> Echange Echanger</h5>
+            <div class="row w-100   text-white rounded-top">
+    
+                <div style="margin-left:15px ;">
+                    <input type="text" placeholder="1.45" formControlName="nbr"style="width: 50px;" class="border-0">
+                    <div style="margin-top:15px ;">
+                        <select class="form-select w-25" aria-label="Default select example" formControlName="currency">
+                            <option selected value="$">$</option>
+                            <option value="£">£</option>
+                          </select>
+                    </div>
+    
+                </div>
+                <div style="margin-left: 400px;">
+                    <div style="border-radius: 15px; width: 100px; text-align: center;  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; " class="shadow-lg ">  
+                        <select class="form-select w-25" aria-label="Default select example" formControlName="type">
+                        <option selected value=" Ether">
+                            <img [src]="ethereum" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        Ether<br>
+                        <i style="font-size: 16px;" class="text-mueted">EPF</i>
+                        </option>
+                        <option value=" USDT" >
+                            <img [src]="usdt" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                            Attache USD <br>
+                            USDT</option>
+                            
+                        <option value="BTC"><img [src]="btc" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                            BTC enveloppé<br>
+                            <i style="font-size: 16px;" class="text-mueted">  WBTC</i></option>
+                        <option value="BNB"><img [src]="binance" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                            Binance <br>
+                            BNB</option>
+
+                      </select></div>
+                    <div style="margin-top:15px ;"  class="text-mueted">
+                       solde:<input type="text" placeholder="0" formControlName="solde"style="width: 50px;" class="border-0">
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa fa-angle-down  rounded-circle bg-secondary  text-white shadow-lg"  style="border: 1px solid #000;position: relative; top:15px ;left: 250px; "></i>
+        </div>
+        <div class="row  bg-dark text-white rounded-bottom shadow-lg " style="height: 150px; margin-left:-0.51px;">
+            <div style="margin-left:25px ;">
+                <input type="text" placeholder="1.45" formControlName="nbr2"style="width: 50px;" class="border-0">
+                <div style="margin-top:10px ;">
+                    <select class="form-select w-25" aria-label="Default select example" formControlName="currency2">
+                        <option selected value="$">$</option>
+                        <option value="£">£</option>
+                      </select>
+                </div>
+    
+            </div>
+            <div style="margin-left: 400px;">
+                <div style="border-radius: 15px; width: 100px; text-align: center;margin-top:-50px ; " class="shadow-lg bg-secondary " >
+                     <img [src]="sushi" class="w-25 rounded-circle" alt="">SUSHI   
+                     <select class="form-select" aria-label="Default select example" style=" width: 1px;height: 5px; position: relative;top: -15px; left: 50px;" formControlName="type2">
+                    <option selected value=" Ether">
+                        <img [src]="ethereum" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                    Ether<br>
+                    <i style="font-size: 16px;" class="text-mueted">EPF</i>
+                    </option>
+                    <option value=" USDT" >
+                        <img [src]="usdt" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        Attache USD <br>
+                        USDT</option>
+                        
+                    <option value="BTC"><img [src]="btc" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        BTC enveloppé<br>
+                        <i style="font-size: 16px;" class="text-mueted">  WBTC</i></option>
+                    <option value="BNB"><img [src]="binance" alt="sushi" class=" rounded-circle" style="width: 25px;">
+                        Binance <br>
+                        BNB</option>
+
+                  </select>
+                </div>
+                <div style="margin-top: 5px ; margin-left: 15px;" class="text-mueted">
+                    solde:<input type="text" placeholder="0" formControlName="solde2"style="width: 50px;" class="border-0">
+                </div>
+            </div>
+        <button type="submit" class="btn btn-primary w-50" style="margin: 0 auto; height: 35px; margin-top:-20px ;">Echangeons Maintenant</button>
+    </div>
+</form>
+  </div>
+  <div class="container text-white" style="margin-top: 65px;">
+    <div class="row">
+      <div class="col-sm">
+        1,09 $
+        PRIX
+      </div>
+      <div class="col-sm">
+        547,09 millions de dollars
+        LIQUIDITÉ TOTALE
+      </div>
+      <div class="col-sm">
+        292,93 milliards de dollars
+        VOLUME TOTAL
+      </div>
+      <div class="col-sm">
+        18.98k
+        NOMBRE TOTAL DE PAIRES
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(17, 15, 15);
+  opacity: 1; /* Firefox */
+
+}
+#hove:hover{
+    
+        opacity: 1;
+
+}
+
+</style>
+    
